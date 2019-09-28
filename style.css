@@ -1,13 +1,35 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
 body, ul {
     padding: 0;
     margin: 0;
 }
+body {
+    border-top: 8px solid #f2ac04;
+}
+
+.gray-text {
+    color: #ababab;
+}
 #logo {
     position: relative;
+    width: 245px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    justify-content: flex-end;
+    padding-right: 35px;
+    border-right: 1px solid grey;
 }
-header {
+header, #header-top {
     display: flex;
     flex-wrap: wrap;
+}
+#header-top {
+    padding: 40px 0;
+    width: 100%;
 }
 #logo::before, #logo::after {
     content: "";
@@ -16,21 +38,38 @@ header {
     height: 55px;
     border-radius: 50%;
     display: block;
+    top: 0;
 }
 #logo::after {
     background: #f2ac04;
     position: absolute;
+    left: 15px;
     top: 0;
-    left: 20px;
 }
-
+#logo::before {
+    background: #f8d277;
+    position: absolute;
+    left: 0;
+}
 #header-menu {
     width: 100%;
 }
 #content {
     max-width: 1000px;
     margin: auto;
-    border: 1px solid grey;
+}
+#header-text {
+    padding-left: 25px;
+    font-size: 14px;
+    text-align: left;
+    color: #ababab;
+}
+#header-text h4{
+    text-transform: uppercase;
+    color: #f8d277;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 10px 0;
 }
 
 header ul {
@@ -38,12 +77,25 @@ header ul {
     flex-wrap: wrap;
     list-style: none;
     padding: 10px 0;
-    border-top: 1px solid grey;
-    border-bottom: 1px solid grey;
+    border-top: 1px solid #ababab;
+    border-bottom: 1px solid #ababab;
 }
 header ul a {
     text-decoration: none;
-    color: grey;
-    padding: 0 70px 0 0;
+    color: #ababab;
+    padding: 10px 20px 10px 20px;
+    margin-right: 50px;
     text-transform: uppercase;
+    border: 1px solid transparent;
+}
+header ul a:hover {
+    border-right: 1px solid #ababab;
+    border-left: 1px solid #ababab;
+    padding: 5px 20px 5px 20px;
+}
+header ul li:first-child a {
+    padding-left: 0;
+}
+header ul li:first-child a:hover {
+    border-left: 1px solid transparent;
 }
