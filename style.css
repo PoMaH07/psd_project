@@ -99,3 +99,58 @@ header ul li:first-child a {
 header ul li:first-child a:hover {
     border-left: 1px solid transparent;
 }
+.title {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: grey;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+#banners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#banners > div { /*говорит что даём стили только первой строке блоков*/
+    max-width: 50%;;
+}
+#banners img {
+    max-width: 100%;
+}
+#banners .bn-left .wrap {
+    margin-right: 15px;
+    border: 1px solid grey;
+    padding: 1px;
+}
+#banners .bn-right .wrap {
+    margin-left: 15px;
+}
+#banners .bn-right .img-block {
+    position: relative;
+}
+#banners .bn-right p {
+    border-top: 1px solid black;
+    margin-top: 5px;
+    padding-top: 15px;
+    font-size: 15px;
+}
+#banners i {
+    color: #f2ac04;
+    font-size: 26px;
+}
+#banners .slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+#banners .bn-right h3 {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    font-size: 2vw;
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0;
+}
