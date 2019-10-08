@@ -10,6 +10,10 @@ body {
     border-top: 8px solid #f2ac04;
 }
 
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: lighter;
+}
 .gray-text {
     color: #ababab;
 }
@@ -54,7 +58,7 @@ header, #header-top {
 #header-menu {
     width: 100%;
 }
-#content {
+#container {
     max-width: 1000px;
     margin: auto;
 }
@@ -127,6 +131,8 @@ header ul li:first-child a:hover {
 }
 #banners .bn-right .img-block {
     position: relative;
+    height: 180px;
+    overflow: hidden;
 }
 #banners .bn-right p {
     border-top: 1px solid black;
@@ -153,4 +159,39 @@ header ul li:first-child a:hover {
     text-transform: uppercase;
     font-weight: normal;
     margin: 0;
+}
+#content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0 0 0;
+    border-top: 1px solid grey;
+    padding: 30px 0 0 0;
+}
+.item {
+    width: 33.33%;
+}
+#content .about, .contacts {
+    padding: 0 40px;
+}
+#content .about {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+#content .item h2 {
+    margin: 0 0 30px 0;
+}
+.news {
+    padding-right: 10px;
+}
+.news .block-news {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px dashed grey;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+.news .block-news h4 {
+    margin: 0 0 5px 0;
 }
