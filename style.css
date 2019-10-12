@@ -10,6 +10,10 @@ body {
     border-top: 8px solid #f2ac04;
 }
 
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-weight: lighter;
+}
 .gray-text {
     color: #ababab;
 }
@@ -54,7 +58,7 @@ header, #header-top {
 #header-menu {
     width: 100%;
 }
-#content {
+#container {
     max-width: 1000px;
     margin: auto;
 }
@@ -98,4 +102,133 @@ header ul li:first-child a {
 }
 header ul li:first-child a:hover {
     border-left: 1px solid transparent;
+}
+.title {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: grey;
+    font-family: sans-serif;
+    margin-top: 40px;
+}
+#banners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#banners > div { /*говорит что даём стили только первой строке блоков*/
+    max-width: 50%;;
+}
+#banners img {
+    max-width: 100%;
+}
+#banners .bn-left .wrap {
+    margin-right: 15px;
+    border: 1px solid grey;
+    padding: 1px;
+}
+#banners .bn-right .wrap {
+    margin-left: 15px;
+}
+#banners .bn-right .img-block {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+#banners .bn-right p {
+    border-top: 1px solid black;
+    margin-top: 5px;
+    padding-top: 15px;
+    font-size: 15px;
+}
+#banners i {
+    color: #f2ac04;
+    font-size: 26px;
+}
+#banners .slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+}
+#banners .bn-right h3 {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+    font-size: 2vw;
+    color: white;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin: 0;
+}
+#content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 40px 0 0 0;
+    border-top: 1px solid grey;
+    padding: 30px 0 0 0;
+}
+.item {
+    width: 33.33%;
+}
+#content .about, .contacts {
+    padding: 0 40px;
+}
+#content .about {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+}
+#content .item h2 {
+    margin: 0 0 30px 0;
+}
+.news {
+    padding-right: 10px;
+}
+.news .block-news {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px dashed grey;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+.news .block-news h4 {
+    margin: 0 0 5px 0;
+}
+.date-news span {
+    color: #f2ac04;
+    font-weight: bold;
+    width: 100%;
+    font-size: 22px;
+}
+.date-news {
+    border-right: 1px solid grey;
+    padding-right: 10px;
+    text-align: center;
+    margin-right: 10px;
+}
+.about {
+    line-height: 24px;
+}
+.contacts > div {
+    border-bottom: 1px dashed grey;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts > div:last-child {
+    border: none;
+}
+.contacts i {
+    font-size: 25px;
+    width: 15%;
+    text-align: center;
+    color: lightgrey;
+}
+.contacts span {
+    width: 70%;
+    color: grey;
+}
+.contacts > div:first-of-type span, .contacts > div:first-of-type + div span {
+    font-weight: bold;
 }
