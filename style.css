@@ -17,7 +17,7 @@ h1, h2, h3 {
 .gray-text {
     color: #ababab;
 }
-#logo {
+#logo, #logo-footer {
     position: relative;
     width: 245px;
     display: flex;
@@ -35,7 +35,7 @@ header, #header-top {
     padding: 40px 0;
     width: 100%;
 }
-#logo::before, #logo::after {
+#logo::before, #logo::after, #logo-footer::before, #logo-footer::after {
     content: "";
     background: #f8d277;
     width: 55px;
@@ -44,13 +44,13 @@ header, #header-top {
     display: block;
     top: 0;
 }
-#logo::after {
+#logo::after, #logo-footer::after {
     background: #f2ac04;
     position: absolute;
     left: 15px;
     top: 0;
 }
-#logo::before {
+#logo::before, #logo-footer::before {
     background: #f8d277;
     position: absolute;
     left: 0;
@@ -231,4 +231,43 @@ header ul li:first-child a:hover {
 }
 .contacts > div:first-of-type span, .contacts > div:first-of-type + div span {
     font-weight: bold;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 0 15px 0;
+    border-top: 1px solid grey;
+    margin-top: 25px;
+}
+#logo-footer {
+    border-right: none;
+    font-size: 20px;
+    height: 60px;
+    padding: 0;
+    width: 150px;
+}
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px 0 5px 0;
+}
+footer ul li {
+    list-style: none;
+}
+footer ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 0px 10px;
+    color: grey;
+    border-right: 1px solid grey;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+footer ul li:last-child a {
+    border-right: none;
+}
+footer span {
+    color:grey;
 }
