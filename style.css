@@ -8,6 +8,7 @@ body, ul {
 }
 body {
     border-top: 8px solid #f2ac04;
+    min-width: 320px;
 }
 
 h1, h2, h3 {
@@ -26,6 +27,7 @@ h1, h2, h3 {
     justify-content: flex-end;
     padding-right: 35px;
     border-right: 1px solid grey;
+    height: 55px;
 }
 header, #header-top {
     display: flex;
@@ -105,7 +107,7 @@ header ul li:first-child a:hover {
 }
 .title {
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 20px;
     color: grey;
     font-family: sans-serif;
     margin-top: 40px;
@@ -270,4 +272,100 @@ footer ul li:last-child a {
 }
 footer span {
     color:grey;
+}
+
+
+@media(max-width: 1050px) {
+    body {
+        padding: 15px;
+    }
+}
+
+@media(max-width: 855px) {
+    #header-menu ul {
+        justify-content: center;
+    }
+    #header-menu ul li {
+        padding: 3px 0 3px 0;
+    }
+    #banners {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #banners .wrap {
+        margin: 5px 0 !important;
+    }
+    .title {
+        text-align: center;
+    }
+    #banners .bn-right .img-block {
+        height: auto;
+    }
+    #banners > div {
+        max-width: 90%;
+    }
+    #banners .bn-right h3 {
+        width: 90%;
+        font-size: 4vw;
+    }
+    #content {
+        margin-top: 5px;
+        padding-top: 5px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #content .item {
+        width: 90%;
+    }
+    #content h2 {
+        margin: 10px !important;
+        text-align: center;
+    }
+    #content .contacts {
+        text-align: left;
+        margin-top: 15px;
+    }
+}
+
+@media(max-width: 672px) {
+    body {
+        padding: 5px;
+    }
+    #logo {
+        border: none;
+        margin: auto;
+    }
+    #header-text {
+        margin-top: 15px;
+        padding: 0;
+    }
+    #header-top {
+        padding: 0 0 15px 0;
+        justify-content: center;
+        text-align: center;
+    }
+    #header-text h4 {
+        margin-bottom: 15px;
+    }
+    footer {
+        margin: 0;
+        padding: 10px 0;
+    }
+    footer ul {
+        justify-content: center;
+        margin: 5px 0;
+    }
+}
+
+@media(max-width: 486px) {
+    #header-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    #header-menu ul li a {
+        padding: 5px;
+        margin: 0;
+    }
 }
